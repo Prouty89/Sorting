@@ -22,15 +22,14 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     n = len(arr)
-    is_sorted = False
-    while not is_sorted:
-        is_sorted = True
+    is_swapped = True
+    while is_swapped:
+        is_swapped = False
         for i in range(n - 1):
             if arr[i] > arr[i + 1]:
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
-                is_sorted = False
+                is_swapped = True
     return arr
-
 
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
